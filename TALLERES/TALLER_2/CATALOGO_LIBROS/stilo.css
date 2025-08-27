@@ -1,0 +1,20 @@
+
+.mos-libro {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    background-color: #6e3b57;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    width: 500px;
+}
+.mos-libro h3 {
+    margin: 0;
+    color: #f7ebeb;
+}
+.mos-libro p {
+    margin: 5px 0;
+    color: #ffffff;
+}
+.mos-libro strong {
+    color: #f7f0f0;
+}
