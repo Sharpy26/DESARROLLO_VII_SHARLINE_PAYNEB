@@ -3,7 +3,7 @@
 include 'operaciones_cadenas.php';
 
 $frases = array(
-    "La bebe juega con la otra bebe",
+    "La bebe juega con la otra bebe, pero la otra no quiere jugar con el bebe",
     "Sharline le gusta libros de crecimiento personal",
     "Juan juega con Juan Pablo",
     "Termina lo que empezaste"
