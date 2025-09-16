@@ -24,7 +24,7 @@ class Libro implements Prestable {
 }
 
 // Ejemplo de uso
-$libro = new Libro("Rayuela", "Julio Cortázar", 1963);
+$libro = new Libro("Rayuela", "Sharline Payne", 2002);
 echo $libro->obtenerInformacion() . "\n";
 echo "Disponible: " . ($libro->estaDisponible() ? "Sí" : "No") . "\n";
 $libro->prestar();
