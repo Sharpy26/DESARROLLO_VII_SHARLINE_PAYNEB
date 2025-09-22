@@ -1,0 +1,47 @@
+[
+    {
+        "tipo": "Gerente",
+        "nombre": "Ana Garc\u00eda",
+        "id": "G001",
+        "salarioBase": 5000,
+        "departamento": "TI",
+        "lenguaje": null,
+        "nivelExperiencia": null
+    },
+    {
+        "tipo": "Gerente",
+        "nombre": "Carlos L\u00f3pez",
+        "id": "G002",
+        "salarioBase": 5500,
+        "departamento": "Ventas",
+        "lenguaje": null,
+        "nivelExperiencia": null
+    },
+    {
+        "tipo": "Desarrollador",
+        "nombre": "Mar\u00eda Rodr\u00edguez",
+        "id": "D001",
+        "salarioBase": 3449.9999999999995,
+        "departamento": null,
+        "lenguaje": "PHP",
+        "nivelExperiencia": "Senior"
+    },
+    {
+        "tipo": "Desarrollador",
+        "nombre": "Juan P\u00e9rez",
+        "id": "D002",
+        "salarioBase": 2750,
+        "departamento": null,
+        "lenguaje": "JavaScript",
+        "nivelExperiencia": "Junior"
+    },
+    {
+        "tipo": "Desarrollador",
+        "nombre": "Laura Mart\u00ednez",
+        "id": "D003",
+        "salarioBase": 4024.9999999999995,
+        "departamento": null,
+        "lenguaje": "Python",
+        "nivelExperiencia": "Senior"
+    }
+]
