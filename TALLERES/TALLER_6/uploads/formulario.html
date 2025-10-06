@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Mejorado - TALLER_6</title>
+    <style>
+        .error { color: red; }
+        .campo { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Formulario de Registro Mejorado</h1>
+    
+    <?php
+    // Recuperar datos previos si existen
+    $datos_previos = [];
+    if (isset($_GET['datos_previos']) && file_exists('datos_temp.json')) {
+        $datos_previos = json_decode(file_get_contents('datos_temp.json'), true);
+        unlink('datos_temp.json'); // Limpiar después de usar
+    }
+    ?>
+    
+    <form action="procesar.php" method="POST" enctype="multipart/form-data">
+        <!-- Campos existentes con valores previos -->
+        <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" 
+                   value="<?php echo htmlspecialchars($datos_previos['nombre'] ?? ''); ?>" required>
+        </div>
+
+        <div class="campo">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" 
+                   value="<?php echo htmlspecialchars($datos_previos['email'] ?? ''); ?>" required>
+        </div>
+
+        <!-- NUEVO CAMPO: Fecha de Nacimiento -->
+        <div class="campo">
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" 
+                   value="<?php echo htmlspecialchars($datos_previos['fecha_nacimiento'] ?? ''); ?>" required>
+        </div>
+
+        <div class="campo">
+            <label>Género:</label>
+            <input type="radio" id="masculino" name="genero" value="masculino" 
+                   <?php echo ($datos_previos['genero'] ?? '') === 'masculino' ? 'checked' : ''; ?>>
+            <label for="masculino">Masculino</label>
+            
+            <input type="radio" id="femenino" name="genero" value="femenino"
+                   <?php echo ($datos_previos['genero'] ?? '') === 'femenino' ? 'checked' : ''; ?>>
+            <label for="femenino">Femenino</label>
+            
+            <input type="radio" id="otro" name="genero" value="otro"
+                   <?php echo ($datos_previos['genero'] ?? '') === 'otro' ? 'checked' : ''; ?>>
+            <label for="otro">Otro</label>
+        </div>
+
+        <div class="campo">
+            <label>Intereses:</label>
+            <?php
+            $intereses_previos = $datos_previos['intereses'] ?? [];
+            $opciones_intereses = ['programacion', 'diseno', 'musica', 'deportes', 'lectura'];
+            
+            foreach ($opciones_intereses as $interes) {
+                $checked = in_array($interes, $intereses_previos) ? 'checked' : '';
+                echo "<input type='checkbox' name='intereses[]' value='$interes' $checked> 
+                      <label>" . ucfirst($interes) . "</label><br>";
+            }
+            ?>
+        </div>
+
+        <div class="campo">
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="">Selecciona un país</option>
+                <option value="españa" <?php echo ($datos_previos['pais'] ?? '') === 'españa' ? 'selected' : ''; ?>>España</option>
+                <option value="mexico" <?php echo ($datos_previos['pais'] ?? '') === 'mexico' ? 'selected' : ''; ?>>México</option>
+                <option value="argentina" <?php echo ($datos_previos['pais'] ?? '') === 'argentina' ? 'selected' : ''; ?>>Argentina</option>
+                <option value="colombia" <?php echo ($datos_previos['pais'] ?? '') === 'colombia' ? 'selected' : ''; ?>>Colombia</option>
+                <option value="chile" <?php echo ($datos_previos['pais'] ?? '') === 'chile' ? 'selected' : ''; ?>>Chile</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="foto_perfil">Foto de Perfil:</label>
+            <input type="file" id="foto_perfil" name="foto_perfil" accept="image/*">
+            <small>Formatos permitidos: JPG, PNG, GIF (Máx. 2MB)</small>
+        </div>
+
+        <div class="campo">
+            <label for="biografia">Biografía:</label>
+            <textarea id="biografia" name="biografia" rows="4"><?php echo htmlspecialchars($datos_previos['biografia'] ?? ''); ?></textarea>
+        </div>
+
+        <div class="campo">
+            <input type="checkbox" id="terminos" name="terminos" required
+                   <?php echo isset($datos_previos['terminos']) ? 'checked' : ''; ?>>
+            <label for="terminos">Acepto los términos y condiciones</label>
+        </div>
+
+        <button type="submit">Enviar Formulario</button>
+    </form>
+
+    <p><a href="resumen.php">Ver resumen de todos los registros</a></p>
+</body>
+</html>
