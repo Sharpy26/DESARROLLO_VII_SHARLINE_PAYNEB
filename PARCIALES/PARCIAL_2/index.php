@@ -9,15 +9,13 @@ $gestor = new GestorInventario();
 $notificacion = '';
 $itemParaEditar = null;
 
-// Capturar parámetros de la URL
 $operacion = $_GET['operacion'] ?? 'listar';
 $campoOrden = $_GET['ordenar'] ?? 'id';
 $tipoOrden = $_GET['tipo'] ?? 'asc';
 $filtroEstado = $_GET['estado'] ?? '';
 
-// Procesar las diferentes operaciones
 if ($operacion === 'crear' && !empty($_GET['nombre'])) {
-    // Recoger datos del formulario
+    
     $datos = [
         'nombre' => $_GET['nombre'],
         'descripcion' => $_GET['descripcion'],
@@ -61,7 +59,6 @@ if ($operacion === 'crear' && !empty($_GET['nombre'])) {
     $itemParaEditar = $gestor->obtenerPorId($_GET['id']);
 }
 
-// Obtener productos (con o sin filtro)
 if ($operacion === 'filtrar' && !empty($filtroEstado)) {
     $listaProductos = $gestor->filtrarPorEstado($filtroEstado);
 } elseif ($operacion === 'ordenar') {
