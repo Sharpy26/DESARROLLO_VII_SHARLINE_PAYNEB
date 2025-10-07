@@ -1,0 +1,10 @@
+En este parcial se creó un sistema web en PHP para gestionar 
+inventario de productos 
+permitiendo registrar 
+editar 
+eliminar 
+filtrar y 
+ordenar productos 
+con almacenamiento en un archivo JSON y una interfaz sencilla para el usuario.
+
+Integrantes: Sharline Payne y Abraham Batista. 
