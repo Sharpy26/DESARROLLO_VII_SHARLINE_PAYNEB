@@ -145,21 +145,21 @@ if ($operacion === 'filtrar' && !empty($filtroEstado)) {
 
                         <!-- Campos específicos por categoría -->
                         <div class="col-md-4" id="contenedorCampoEspecifico" style="display:none;">
-                            <!-- Campo para Electrónico -->
+                            <!-- Electrónico -->
                             <div id="campoElectronico" style="display:none;">
                                 <label class="form-label">Garantía (meses)</label>
                                 <input type="number" class="form-control" name="garantiaMeses" min="0" 
                                        value="<?php echo $itemParaEditar->garantiaMeses ?? ''; ?>">
                             </div>
                             
-                            <!-- Campo para Alimento -->
+                            <!-- Alimento -->
                             <div id="campoAlimento" style="display:none;">
                                 <label class="form-label">Fecha de Vencimiento</label>
                                 <input type="date" class="form-control" name="fechaVencimiento"
                                        value="<?php echo $itemParaEditar->fechaVencimiento ?? ''; ?>">
                             </div>
                             
-                            <!-- Campo para Ropa -->
+                            <!-- Ropa -->
                             <div id="campoRopa" style="display:none;">
                                 <label class="form-label">Talla</label>
                                 <select class="form-select" name="talla">
@@ -191,7 +191,7 @@ if ($operacion === 'filtrar' && !empty($filtroEstado)) {
             </div>
         </div>
 
-        <!-- Filtros -->
+        
         <div class="card mb-4">
             <div class="card-body">
                 <form method="GET" action="index.php" class="row g-3">
@@ -217,7 +217,7 @@ if ($operacion === 'filtrar' && !empty($filtroEstado)) {
             </div>
         </div>
 
-        <!-- Tabla de Productos -->
+        <!-- Tabla -->
         <div class="card">
             <div class="card-header bg-dark text-white">
                 <h5 class="mb-0"><i class="fas fa-list"></i> Lista de Productos</h5>
