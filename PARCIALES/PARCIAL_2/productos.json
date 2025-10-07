@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nombre": "Laptop Dell XPS 15",
+        "descripcion": "Laptop de alto rendimiento para trabajo profesional",
+        "estado": "disponible",
+        "stock": 15,
+        "fechaIngreso": "2024-08-15",
+        "categoria": "electronico",
+        "garantiaMeses": 24,
+        "fechaVencimiento": null,
+        "talla": null
+    },
+    {
+        "id": 2,
+        "nombre": "Cereal Integral Fitness",
+        "descripcion": "Cereal alto en fibra 500g",
+        "estado": "disponible",
+        "stock": 45,
+        "fechaIngreso": "2024-09-10",
+        "categoria": "alimento",
+        "garantiaMeses": null,
+        "fechaVencimiento": "2025-03-15",
+        "talla": null
+    },
+    {
+        "id": 3,
+        "nombre": "Camiseta Deportiva Nike",
+        "descripcion": "Camiseta Dri-FIT para entrenamiento",
+        "estado": "agotado",
+        "stock": 0,
+        "fechaIngreso": "2024-07-20",
+        "categoria": "ropa",
+        "garantiaMeses": null,
+        "fechaVencimiento": null,
+        "talla": "M"
+    },
+    {
+        "id": 5,
+        "nombre": "Helado Choco Belga",
+        "descripcion": "Helado de chocolate con ricos trozos de hershey. ",
+        "estado": "por_recibir",
+        "stock": "3",
+        "fechaIngreso": "2025-10-07",
+        "categoria": "alimento",
+        "garantiaMeses": "",
+        "fechaVencimiento": "2025-11-06",
+        "talla": ""
+    },
+    {
+        "id": 6,
+        "nombre": "Zarah",
+        "descripcion": "T-shirt de algodón, moldeado y diseñado para cualquier tipo de cuerpo.",
+        "estado": "disponible",
+        "stock": "10",
+        "fechaIngreso": "2025-10-07",
+        "categoria": "ropa",
+        "garantiaMeses": "",
+        "fechaVencimiento": "",
+        "talla": "S"
+    },
+    {
+        "id": 7,
+        "nombre": "HM",
+        "descripcion": "Pantalones para varones oversize",
+        "estado": "por_recibir",
+        "stock": "5",
+        "fechaIngreso": "2025-10-07",
+        "categoria": "ropa",
+        "garantiaMeses": "",
+        "fechaVencimiento": "",
+        "talla": "L"
+    }
+]
