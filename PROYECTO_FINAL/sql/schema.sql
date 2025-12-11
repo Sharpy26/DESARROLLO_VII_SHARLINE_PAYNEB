@@ -1,8 +1,8 @@
--- Restaurante simple schema
+-- Restaurante schema
 CREATE DATABASE IF NOT EXISTS restaurante_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE restaurante_db;
 
--- Menu items
+-- Menu 
 CREATE TABLE IF NOT EXISTS menu (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(150) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS menu (
   precio DECIMAL(10,2) NOT NULL
 );
 
--- Reservations
+-- Reservación
 CREATE TABLE IF NOT EXISTS reservas (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nombre_cliente VARCHAR(150) NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS reservas (
   creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Ingredients / inventory
+-- Ingredientes / inventario
 CREATE TABLE IF NOT EXISTS inventario (
   id INT AUTO_INCREMENT PRIMARY KEY,
   ingrediente VARCHAR(150) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS inventario (
   unidad VARCHAR(20) DEFAULT 'u'
 );
 
--- Orders
+-- Ordern
 CREATE TABLE IF NOT EXISTS pedidos (
   id INT AUTO_INCREMENT PRIMARY KEY,
   mesa VARCHAR(50) DEFAULT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS pedidos (
   creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Order items
+-- Orden items
 CREATE TABLE IF NOT EXISTS pedido_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   pedido_id INT NOT NULL,
@@ -49,4 +49,4 @@ CREATE TABLE IF NOT EXISTS pedido_items (
   FOREIGN KEY (menu_id) REFERENCES menu(id)
 );
 
--- Sales simple: we can sum pedidos by fecha
+
