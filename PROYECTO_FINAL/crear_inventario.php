@@ -20,7 +20,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
   <meta charset="utf-8">
   <title>Agregar Ingrediente</title>
   <style>
-    /* Estilo estudiantil: simple y plano */
     body {
       font-family: Arial, sans-serif;
       background-image: url('https://img.freepik.com/foto-gratis/vista-superior-arreglo-rodajas-tomate_23-2148643013.jpg');
